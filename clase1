@@ -1,0 +1,47 @@
+/*
+Primero haremos nuestro programa pl sql 
+Ejercicio1
+Programa 1
+*/
+SET SERVEROUTPUT ON;
+--Este es un comentario de una sola linea
+
+--DECLARE: Aqui se declaran las variables (opcional), si es que no hay variables
+BEGIN 
+--BEGIN: Este bloque marca el inicio de tu logica de programacion (obligatorio), nunca debe de estar vacio
+--NULL;
+
+DBMS_OUTPUT.PUT_LINE('MI PRIMER PROGRAMA DE PL SQL');
+--EXCEPTION: Este bloque termina repentinamete (opcional) ya que no todos los codigos lanzan excepciones
+
+END;
+-- / : Se usa si nquieres correr este bloque desde linea de comandos y marca la terminacion del bloque PL SQL y su ejecucion
+
+
+
+
+--Programa 2
+DECLARE 
+EDAD INTEGER; 
+EDAD_DIAS INTEGER;
+BEGIN
+EDAD:=21;
+EDAD_DIAS:= EDAD*365;
+DBMS_OUTPUT.PUT_LINE('TU EDAD EN DIAS ES: '||EDAD_DIAS);
+END;
+/
+
+
+--Ejemplo tarea 
+
+CREATE TABLE HOLA (ID INTEGER, EDAD INTEGER, NOMBRE VARCHAR2(120));
+
+BEGIN
+
+ FOR I IN 1..10 LOOP
+  DBMS_OUTPUT.PUT_LINE(I||'PRIMER CICLO');
+  INSERT INTO HOLA VALUES(I,21,'DANYA'); 
+ END LOOP ;
+END;
+
+SELECT * FROM HOLA;

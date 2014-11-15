@@ -1,0 +1,38 @@
+ URL url = new URL("http://172.16.20.53:8095/base-datos/hola");
+     // URL url = new URL("http://192.168.0.102:8091/jelastic_campitos/servicios/usuario");
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+      String USER_AGENT = "Mozilla/5.0";
+ con.setRequestMethod("GET");
+		con.setRequestProperty("User-Agent", USER_AGENT);
+		con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+                //con.setRequestProperty("content-type","application/json; charset=utf-8"); 
+               con.setRequestProperty("content-type","text/html; charset=utf-8"); 
+ 
+		//String urlParameters = "signo="+signo;
+            
+		
+		//con.setDoOutput(true);
+		//DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+		//wr.writeBytes(urlParameters);
+		//wr.flush();
+		//wr.close();
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(
+                                    con.getInputStream()));
+        String inputLine;
+
+        while ((inputLine = in.readLine()) != null) {
+        valor=inputLine;
+    
+        }
+    
+        in.close();
+        
+     }catch(Exception e){
+      valor=e.getMessage();
+     }
+        
+        return valor;
+    }
+    
+}

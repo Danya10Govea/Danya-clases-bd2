@@ -17,13 +17,13 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author T202
  */
-public class ServletGuardarXXX extends HttpServlet {
+public class ServletAlmacenar extends HttpServlet {
 
     
     protected void doPost (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        out.println("Probando la insercion por el procediiento almacenado");
+        out.println("Procediiento almacenado");
     }
 }

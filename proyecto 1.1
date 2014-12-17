@@ -1,5 +1,5 @@
- URL url = new URL("http://172.16.20.53:8095/base-datos/hola");
-     // URL url = new URL("http://192.168.0.102:8091/jelastic_campitos/servicios/usuario");
+ URL url = new URL("http://172.16.20.53:8095/base-datos");
+     // URL url = new URL("http://127.20.0.1:8080/proyectfinal");
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
       String USER_AGENT = "Mozilla/5.0";
  con.setRequestMethod("GET");
@@ -13,7 +13,7 @@
 		
 		//con.setDoOutput(true);
 		//DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-		//wr.writeBytes(urlParameters);
+		//wr.writeBytes(urlParameters)
 		//wr.flush();
 		//wr.close();
 
@@ -36,7 +36,3 @@
     }
     
 }
-
-
-(https://github.com/daton/desktop-final)CLIENTE-------> Team-clone
-(https://github.com/daton/base-datos)SERVIDOR
